@@ -1,59 +1,61 @@
-#ÌÓÀëÑ¼¿Æ·ò Óã·· Mod / Fish Seller Mod
+# é€ƒç¦»é¸­ç§‘å¤« é±¼è´© Mod / Fish Seller Mod
 
-µöÓãÌ«·³£¿ÏëÖ±½ÓÂò£¿Õâ¸ö Mod »áÔÚ»ùµØ¿ËÂ¡Ò»¸öÊÛ»õ»ú²¢Ìí¼Ó¡°Óã··¡±ÉÌÈË£¬Äã¿ÉÒÔÖ±½Ó¹ºÂò¸÷ÖÖÓãÀà¡£
+é’“é±¼å¤ªçƒ¦ï¼Ÿæƒ³ç›´æ¥ä¹°ï¼Ÿè¿™ä¸ª Mod ä¼šåœ¨åŸºåœ°å…‹éš†ä¸€ä¸ªå”®è´§æœºå¹¶æ·»åŠ â€œé±¼è´©â€å•†äººï¼Œä½ å¯ä»¥ç›´æ¥è´­ä¹°å„ç§é±¼ç±»ã€‚
 
-- ¿ÉÅäÖÃ¿â´æÉÏÏŞÓëÊÛ¼ÛÏµÊı
-- ÓëÓÎÏ·ÄÚÉÌµê UI¡¢¹ºÂòÓë´æµµÏµÍ³ÎŞ·ìÏÎ½Ó
+- å¯é…ç½®åº“å­˜ä¸Šé™ä¸å”®ä»·ç³»æ•°
+- ä¸æ¸¸æˆå†…å•†åº— UIã€è´­ä¹°ä¸å­˜æ¡£ç³»ç»Ÿæ— ç¼è¡”æ¥
 
----
-
-ÖĞÎÄËµÃ÷
-
-1) ¹¦ÄÜ
-- ÔÚ³¡¾°ÖĞÉú³ÉÒ»¸öÃûÎª `FishSaleMachine` µÄÊÛ»õ»ú²¢¹ÒÔØĞÂµÄ `StockShop`
-- ĞÂÔöÉÌÈË ID£º`fish_seller`
-- ÉÏ¼Ü `FishTypeIds` ÖĞÅäÖÃµÄÈ«²¿ÓãÀà£¬¿ÉÖ±½Ó¹ºÂò
-
-2) °²×°
-	1. ´ÓÔ´Âë¹¹½¨
-		- Ê¹ÓÃÈÎÒâ IDE ´ò¿ª±¾ÏîÄ¿£¨.NET Standard2.1£©
-		- ±àÒëÉú³É DLL£¨ÏîÄ¿Ãû£º`FishSeller`£©
-		- ½«Éú³ÉµÄ DLL °ü×°³ÉÍêÕûMOD²¢·ÅÈëÓÎÏ· ModÄ¿Â¼£¨²Î¿¼¹Ù·½ Modding ÎÄµµµÄ°²×°ËµÃ÷£¬Í¼±êºÍĞÅÏ¢²Î¿¼ÏîÄ¿ÎÄµµÏÂµÄ`FishSeller\`Ä¿Â¼£©
-	2.Ö±½ÓÊ¹ÓÃ
-		- ÏÂÔØ·¢²¼Ò³»òÕßÏîÄ¿Ä¿Â¼ÖĞµÄ`FishSeller.zip`²¢½âÑ¹
-		-¸´ÖÆµ½ÓÎÏ·¸ùÄ¿Â¼ÏÂµÄ `Mods` ÎÄ¼ş¼ĞÖĞ£¨ÈôÎŞÔòĞÂ½¨£©
-
-3) Ê¹ÓÃ
--½øÈë»ùµØ³¡¾°£¨Ä¬ÈÏÊ¾ÀıÔÚ `Base_SceneV2` ÖĞÆôÓÃ£©
-- µØÍ¼ÖĞ»á³öÏÖ `FishSaleMachine`£¨»ùÓÚÓÎÏ·×Ô´ø `SaleMachine` ¿ËÂ¡£¬Ä¬ÈÏÔÚÔ­Î»ÖÃµÄ XÖáÆ«ÒÆ£©
-- ´ò¿ªÊÛ»õ»ú¼´¿ÉÏò `fish_seller`¹ºÂòÓãÀà
-
-4) ¿ÉÅäÖÃÏî£¨ÔÚ´úÂëÀïĞŞ¸Ä£©
-- ÎÄ¼ş£º`ref.cs`£¨ÃüÃû¿Õ¼ä `FishSeller`£¬Àà `ModBehaviour`£©
- - `FishTypeIds`£ºÓãÀàµÄÈ«²¿ TypeID£¨ÒÑÔ¤ÌîÒ»×é ID£¬¿É°´ĞèÔöÉ¾£©
- - `DefaultMaxStock`£ºÄ¬ÈÏ¿â´æÉÏÏŞ£¨ÓÅÏÈÊ¹ÓÃÎïÆ·µÄ MaxStackCount£¬µ± `UsePrefabMaxStack=true`£©
- - `BuyPriceFactor`£º¹ºÂò¼ÛÏµÊı£¨×îÖÕ¼Û¸ñ = »ù´¡¼ÛÖµ *¸ÃÏµÊı£©
- - `UsePrefabMaxStack`£ºÈôÎª `true`£¬¿â´æÉÏÏŞÓÅÏÈÈ¡ÎïÆ·µÄ `MaxStackCount`
- - `PlaceOffset`£º¿ËÂ¡³öÀ´µÄ `FishSaleMachine` Ïà¶ÔÔ­»úÆ÷µÄÎ»ÖÃÆ«ÒÆ
-
-5)¼æÈİĞÔÓë×¢ÒâÊÂÏî
--Ä¿±ê¿ò¼Ü£º.NET Standard2.1
-- ÈôÄãĞŞ¸ÄÁË³¡¾°Ãû£¬Çëµ÷Õû´úÂëÖĞ¶Ô `Base_SceneV2` µÄÅĞ¶Ï
-- ±¾ Mod²Î¿¼¹Ù·½Ê¾ÀıÓëµÚÈı·½ SuperPerkShop µÄÊµÏÖË¼Â·£¬¾¡Á¿²»ÆÆ»µÔ­ÓĞÉÌµêÓë´æµµÂß¼­
-
-6)Î´À´¸üĞÂ·½Ïò
-- µ÷Õû¸üºÏÊÊµÄÊÛ»õ»úÎ»ÖÃ
-- ÔÚÓÎÏ·ÄÚÌá¹©ÅäÖÃ½çÃæ£¨ÎŞĞè¸Ä´úÂë£©
-
-7) ÃùĞ» /²Î¿¼
-- ¹Ù·½ MOD Ê¾Àı: https://github.com/xvrsl/duckov_modding
-- SuperPerkShop£¨Lexcellent£©: https://github.com/Lexcellent/SuperPerkShop
-- ÓãÀà ID²Î¿¼: https://wiki.biligame.com/duckov/%E5%88%86%E7%B1%BB:%E9%B1%BC
-
+æœ¬modå·²ç»ä¸Šä¼ è‡³steamåˆ›æ„å·¥åŠï¼Œ[ç›´æ¥è®¿é—®](https://steamcommunity.com/sharedfiles/filedetails/?id=3594623408)å³å¯è®¢é˜…
 
 ---
 
-English
+##ä¸­æ–‡è¯´æ˜
+
+1) åŠŸèƒ½
+- åœ¨åœºæ™¯ä¸­ç”Ÿæˆä¸€ä¸ªåä¸º `FishSaleMachine` çš„å”®è´§æœºå¹¶æŒ‚è½½æ–°çš„ `StockShop`
+- æ–°å¢å•†äºº IDï¼š`fish_seller`
+- ä¸Šæ¶ `FishTypeIds` ä¸­é…ç½®çš„å…¨éƒ¨é±¼ç±»ï¼Œå¯ç›´æ¥è´­ä¹°
+
+2) å®‰è£…
+	1. ä»æºç æ„å»º
+		- ä½¿ç”¨ä»»æ„ IDE æ‰“å¼€æœ¬é¡¹ç›®ï¼ˆ.NET Standard2.1ï¼‰
+		- ç¼–è¯‘ç”Ÿæˆ DLLï¼ˆé¡¹ç›®åï¼š`FishSeller`ï¼‰
+		- å°†ç”Ÿæˆçš„ DLL åŒ…è£…æˆå®Œæ•´MODå¹¶æ”¾å…¥æ¸¸æˆ Modç›®å½•ï¼ˆå‚è€ƒå®˜æ–¹ Modding æ–‡æ¡£çš„å®‰è£…è¯´æ˜ï¼Œå›¾æ ‡å’Œä¿¡æ¯å‚è€ƒé¡¹ç›®æ–‡æ¡£ä¸‹çš„`FishSeller\`ç›®å½•ï¼‰
+	2.ç›´æ¥ä½¿ç”¨
+		- ä¸‹è½½å‘å¸ƒé¡µæˆ–è€…é¡¹ç›®ç›®å½•ä¸­çš„`FishSeller.zip`å¹¶è§£å‹
+		-å¤åˆ¶åˆ°æ¸¸æˆæ ¹ç›®å½•ä¸‹çš„ `Mods` æ–‡ä»¶å¤¹ä¸­ï¼ˆè‹¥æ— åˆ™æ–°å»ºï¼‰
+
+3) ä½¿ç”¨
+-è¿›å…¥åŸºåœ°åœºæ™¯ï¼ˆé»˜è®¤ç¤ºä¾‹åœ¨ `Base_SceneV2` ä¸­å¯ç”¨ï¼‰
+- åœ°å›¾ä¸­ä¼šå‡ºç° `FishSaleMachine`ï¼ˆåŸºäºæ¸¸æˆè‡ªå¸¦ `SaleMachine` å…‹éš†ï¼Œé»˜è®¤åœ¨åŸä½ç½®çš„ Xè½´åç§»ï¼‰
+- æ‰“å¼€å”®è´§æœºå³å¯å‘ `fish_seller`è´­ä¹°é±¼ç±»
+
+4) å¯é…ç½®é¡¹ï¼ˆåœ¨ä»£ç é‡Œä¿®æ”¹ï¼‰
+- æ–‡ä»¶ï¼š`ref.cs`ï¼ˆå‘½åç©ºé—´ `FishSeller`ï¼Œç±» `ModBehaviour`ï¼‰
+ - `FishTypeIds`ï¼šé±¼ç±»çš„å…¨éƒ¨ TypeIDï¼ˆå·²é¢„å¡«ä¸€ç»„ IDï¼Œå¯æŒ‰éœ€å¢åˆ ï¼‰
+ - `DefaultMaxStock`ï¼šé»˜è®¤åº“å­˜ä¸Šé™ï¼ˆä¼˜å…ˆä½¿ç”¨ç‰©å“çš„ MaxStackCountï¼Œå½“ `UsePrefabMaxStack=true`ï¼‰
+ - `BuyPriceFactor`ï¼šè´­ä¹°ä»·ç³»æ•°ï¼ˆæœ€ç»ˆä»·æ ¼ = åŸºç¡€ä»·å€¼ *è¯¥ç³»æ•°ï¼‰
+ - `UsePrefabMaxStack`ï¼šè‹¥ä¸º `true`ï¼Œåº“å­˜ä¸Šé™ä¼˜å…ˆå–ç‰©å“çš„ `MaxStackCount`
+ - `PlaceOffset`ï¼šå…‹éš†å‡ºæ¥çš„ `FishSaleMachine` ç›¸å¯¹åŸæœºå™¨çš„ä½ç½®åç§»
+
+5)å…¼å®¹æ€§ä¸æ³¨æ„äº‹é¡¹
+-ç›®æ ‡æ¡†æ¶ï¼š.NET Standard2.1
+- è‹¥ä½ ä¿®æ”¹äº†åœºæ™¯åï¼Œè¯·è°ƒæ•´ä»£ç ä¸­å¯¹ `Base_SceneV2` çš„åˆ¤æ–­
+- æœ¬ Modå‚è€ƒå®˜æ–¹ç¤ºä¾‹ä¸ç¬¬ä¸‰æ–¹ SuperPerkShop çš„å®ç°æ€è·¯ï¼Œå°½é‡ä¸ç ´ååŸæœ‰å•†åº—ä¸å­˜æ¡£é€»è¾‘
+
+6)æœªæ¥æ›´æ–°æ–¹å‘
+- è°ƒæ•´æ›´åˆé€‚çš„å”®è´§æœºä½ç½®
+- åœ¨æ¸¸æˆå†…æä¾›é…ç½®ç•Œé¢ï¼ˆæ— éœ€æ”¹ä»£ç ï¼‰
+
+7) é¸£è°¢ /å‚è€ƒ
+- å®˜æ–¹ MOD ç¤ºä¾‹: https://github.com/xvrsl/duckov_modding
+- SuperPerkShopï¼ˆLexcellentï¼‰: https://github.com/Lexcellent/SuperPerkShop
+- é±¼ç±» IDå‚è€ƒ: https://wiki.biligame.com/duckov/%E5%88%86%E7%B1%BB:%E9%B1%BC
+
+
+---
+
+## English
 
 1) Overview
 This mod clones a vending machine in the base and adds a dedicated merchant "fish_seller" so you can buy fish items directly.
@@ -65,10 +67,10 @@ This mod clones a vending machine in the base and adds a dedicated merchant "fis
 1. Build from source
  - Open the project in your IDE (targeting .NET Standard2.1)
  - Build the project (Project name: `FishSeller`) to produce the DLL
- - Package the DLL as a complete mod and place it into the game¡¯s `Mods` folder (follow the official modding guide; for icons/metadata, refer to the `FishSeller/` folder in this repo)
+ - Package the DLL as a complete mod and place it into the gameâ€™s `Mods` folder (follow the official modding guide; for icons/metadata, refer to the `FishSeller/` folder in this repo)
 2. Direct use
  - Download `FishSeller.zip` from Releases or from the project directory and extract it
- - Copy the extracted folder into the game¡¯s `Mods` directory (create it if it doesn¡¯t exist)
+ - Copy the extracted folder into the gameâ€™s `Mods` directory (create it if it doesnâ€™t exist)
 
 3) How to use
 - Enter the base scene (sample logic targets `Base_SceneV2` by default)
@@ -99,7 +101,7 @@ This mod clones a vending machine in the base and adds a dedicated merchant "fis
 
 ---
 
-ÉùÃ÷ / Disclaimer
-- ±¾²Ö¿â×÷Õß¶Ô C# ²»Ì«ÊìÏ¤£¬±àĞ´Ê±²Î¿¼ÁË¿ªÔ´ÏîÄ¿²¢Ê¹ÓÃÁË AI ¸¨Öú¡£
+å£°æ˜ / Disclaimer
+- æœ¬ä»“åº“ä½œè€…å¯¹ C# ä¸å¤ªç†Ÿæ‚‰ï¼Œç¼–å†™æ—¶å‚è€ƒäº†å¼€æºé¡¹ç›®å¹¶ä½¿ç”¨äº† AI è¾…åŠ©ã€‚
 - This project was built with references to open-source examples and with AI assistance.
 
