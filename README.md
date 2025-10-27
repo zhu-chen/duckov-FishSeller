@@ -1,4 +1,4 @@
-# 逃离鸭科夫 鱼贩 Mod / Fish Seller Mod
+#逃离鸭科夫 鱼贩 Mod / Fish Seller Mod
 
 钓鱼太烦？想直接买？这个 Mod 会在基地克隆一个售货机并添加“鱼贩”商人，你可以直接购买各种鱼类。
 
@@ -15,10 +15,13 @@
 - 上架 `FishTypeIds` 中配置的全部鱼类，可直接购买
 
 2) 安装
-- 使用任意 IDE 打开本项目（.NET Standard2.1）
-- 编译生成 DLL（项目名：`FishSeller`）
-- 将生成的 DLL 放入游戏 Mod目录（或参考官方 Modding 文档的安装说明）
-- 启动游戏
+	1. 从源码构建
+		- 使用任意 IDE 打开本项目（.NET Standard2.1）
+		- 编译生成 DLL（项目名：`FishSeller`）
+		- 将生成的 DLL 包装成完整MOD并放入游戏 Mod目录（参考官方 Modding 文档的安装说明，图标和信息参考项目文档下的`FishSeller\`目录）
+	2.直接使用
+		- 下载发布页或者项目目录中的`FishSeller.zip`并解压
+		-复制到游戏根目录下的 `Mods` 文件夹中（若无则新建）
 
 3) 使用
 -进入基地场景（默认示例在 `Base_SceneV2` 中启用）
@@ -38,46 +41,58 @@
 - 若你修改了场景名，请调整代码中对 `Base_SceneV2` 的判断
 - 本 Mod参考官方示例与第三方 SuperPerkShop 的实现思路，尽量不破坏原有商店与存档逻辑
 
-6) 鸣谢 /参考
+6)未来更新方向
+- 调整更合适的售货机位置
+- 在游戏内提供配置界面（无需改代码）
+
+7) 鸣谢 /参考
 - 官方 MOD 示例: https://github.com/xvrsl/duckov_modding
 - SuperPerkShop（Lexcellent）: https://github.com/Lexcellent/SuperPerkShop
 - 鱼类 ID参考: https://wiki.biligame.com/duckov/%E5%88%86%E7%B1%BB:%E9%B1%BC
+
 
 ---
 
 English
 
 1) Overview
-This mod adds a “Fish Seller” merchant by cloning an in-base vending machine so you can buy all fish items directly.
+This mod clones a vending machine in the base and adds a dedicated merchant "fish_seller" so you can buy fish items directly.
 
-- Configurable stock and price factor
+- Configurable stock cap and price factor
 - Integrates with the in-game shop UI, purchase flow, and save system
 
 2) Installation
-- Open the project in your IDE (targeting .NET Standard2.1)
-- Build the project (Project name: `FishSeller`) to produce the DLL
-- Place the built DLL into the game’s Mods folder (or follow the official modding guide)
-- Launch the game
+1. Build from source
+ - Open the project in your IDE (targeting .NET Standard2.1)
+ - Build the project (Project name: `FishSeller`) to produce the DLL
+ - Package the DLL as a complete mod and place it into the game’s `Mods` folder (follow the official modding guide; for icons/metadata, refer to the `FishSeller/` folder in this repo)
+2. Direct use
+ - Download `FishSeller.zip` from Releases or from the project directory and extract it
+ - Copy the extracted folder into the game’s `Mods` directory (create it if it doesn’t exist)
 
 3) How to use
 - Enter the base scene (sample logic targets `Base_SceneV2` by default)
-- A cloned vending machine named `FishSaleMachine` will appear (offset from the original `SaleMachine`)
+- A cloned vending machine named `FishSaleMachine` will appear (based on `SaleMachine`, offset along the X axis)
 - Interact with it to purchase fish from merchant `fish_seller`
 
 4) Configuration (edit in source code)
 - File: `ref.cs` (namespace `FishSeller`, class `ModBehaviour`)
- - `FishTypeIds`: All fish TypeIDs (pre-filled; adjust freely)
+ - `FishTypeIds`: All fish TypeIDs (pre-filled; adjust as needed)
  - `DefaultMaxStock`: Default stock (prefers item `MaxStackCount` when `UsePrefabMaxStack=true`)
  - `BuyPriceFactor`: Price factor (final price = base value * factor)
- - `UsePrefabMaxStack`: Use item `MaxStackCount` as stock cap if available
+ - `UsePrefabMaxStack`: Use item `MaxStackCount` as stock cap when available
  - `PlaceOffset`: Position offset for the cloned `FishSaleMachine`
 
 5) Compatibility & Notes
 - Target Framework: .NET Standard2.1
 - If your scene name differs, update the `Base_SceneV2` check accordingly
-- The implementation follows the official sample and SuperPerkShop approach and aims not to break existing shop/save logic
+- Implementation follows the official sample and SuperPerkShop approach to avoid breaking existing shop/save logic
 
-6) Credits / References
+6) Roadmap
+- Improve the vending machine placement
+- Provide in-game configuration UI (no code edits required)
+
+7) Credits / References
 - Official mod sample: https://github.com/xvrsl/duckov_modding
 - SuperPerkShop (Lexcellent): https://github.com/Lexcellent/SuperPerkShop
 - Fish IDs reference: https://wiki.biligame.com/duckov/%E5%88%86%E7%B1%BB:%E9%B1%BC
